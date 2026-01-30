@@ -25,7 +25,8 @@ export const SubmitButton = () => {
             alert(`Pipeline Analysis:\n\nNodes: ${data.num_nodes}\nEdges: ${data.num_edges}\nDAG: ${data.is_dag}`);
         } catch (error) {
             console.error('Submission error:', error);
-            alert('An error occurred while submitting the pipeline. Please check the console.');
+            // Mock response for frontend-only demo
+            alert(`Backend not connected (Frontend Demo).\n\nMock Pipeline Analysis:\nNodes: ${nodes.length}\nEdges: ${edges.length}\nDAG: true (Simulated)`);
         }
     };
 

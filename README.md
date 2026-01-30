@@ -1,41 +1,17 @@
-# React Pipeline Forge
+# React Pipeline Forge (Frontend Demo)
 
-A full-stack application with a React frontend (using React Flow) and a FastAPI backend.
+A React-based pipeline builder application.
+
+## Frontend Only Deployment
+
+This project is deployed as a standalone frontend application. 
+The backend submission logic is **simulated** for demonstration purposes since the backend service is not deployed.
 
 ## Project Structure
 
 - `frontend/`: React application created with Create React App.
-- `backend/`: FastAPI application.
 
-## Prerequisites
-
-- Node.js (v14 or higher)
-- Python (v3.8 or higher)
-
-## Setup & Running
-
-### Backend
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(If `pip` is not in your PATH, try `python -m pip install -r requirements.txt`)*
-
-3. Run the server:
-   ```bash
-   uvicorn main:app --reload --port 8000
-   ```
-   *(Or `python -m uvicorn main:app --reload --port 8000`)*
-
-   The backend will start at `http://127.0.0.1:8000`.
-
-### Frontend
+## Running Locally
 
 1. Navigate to the frontend directory:
    ```bash
@@ -57,4 +33,4 @@ A full-stack application with a React frontend (using React Flow) and a FastAPI 
 ## Features
 
 - **Pipeline Builder**: Drag and drop nodes to create pipelines.
-- **DAG Detection**: The backend verifies if the pipeline is a Directed Acyclic Graph (DAG).
+- **Frontend Demo Mode**: Simulates backend response for DAG analysis when the backend is unavailable.
