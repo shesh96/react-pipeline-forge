@@ -1,10 +1,10 @@
 // BaseNode.js
-import { Handle, Position } from 'reactflow';
+import { Handle } from 'reactflow';
 
 export const BaseNode = ({ id, label, children, handles = [], style = {} }) => {
   return (
     <div className="custom-node" style={style}>
-        {/* Render Handles */}
+      {/* Render Handles */}
       {handles.map((handle, index) => (
         <Handle
           key={`${id}-${handle.id || index}`}
@@ -15,7 +15,7 @@ export const BaseNode = ({ id, label, children, handles = [], style = {} }) => {
           isConnectable={handle.isConnectable}
         />
       ))}
-      
+
       <div className="custom-node-header">
         <span>{label}</span>
       </div>
