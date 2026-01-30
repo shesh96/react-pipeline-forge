@@ -2,6 +2,8 @@
 
 > A visual, drag-and-drop pipeline builder that helps you construct and analyze directed acyclic graphs (DAGs) for LLM workflows.
 
+[![Vercel App](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://react-pipeline-forge.vercel.app/)
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![React](https://img.shields.io/badge/Frontend-React-61DAFB.svg)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688.svg)
