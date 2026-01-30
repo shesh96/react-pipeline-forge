@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #6366f1;
+  --primary-light: #818cf8;
+  --bg-color: #f8fafc;
+  --node-bg: #ffffff;
+  --node-border: #e2e8f0;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+/* Pipeline UI Container */
+.pipeline-ui {
+    width: 100vw;
+    height: 70vh;
+}
+
+/* Custom Node Styles */
+.custom-node {
+  background: var(--node-bg);
+  border: 1px solid var(--node-border);
+  border-radius: 12px;
+  min-width: 200px;
+  min-height: 80px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.custom-node:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.custom-node-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--node-border);
+  font-weight: 600;
+  color: var(--text-primary);
+  background: #f1f5f9;
+  border-radius: 12px 12px 0 0;
+  font-size: 14px;
+}
+
+.custom-node-body {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Form Elements inside Nodes */
+.custom-node label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.custom-node input,
+.custom-node select,
+.custom-node textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--node-border);
+  border-radius: 6px;
+  font-size: 13px;
+  background: #fff;
+  color: var(--text-primary);
+  box-sizing: border-box; /* Important for width: 100% */
+  font-family: inherit;
+}
+
+.custom-node input:focus,
+.custom-node select:focus,
+.custom-node textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* React Flow Handle Overrides */
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background: var(--node-bg);
+  border: 2px solid var(--primary-color);
+}
+
+.react-flow__handle:hover {
+    background: var(--primary-color);
+}
